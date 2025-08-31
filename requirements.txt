@@ -1,0 +1,9 @@
+opencv-python-headless==4.10.0.84
+numpy==2.1.2
+ultralytics==8.3.189
+onnx==1.19.0
+onnxruntime==1.20.1
+torch>=2.0.0
+torchvision>=0.15.0
+Pillow==11.1.0
+scipy>=1.10.0
