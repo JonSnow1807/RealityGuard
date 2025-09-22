@@ -1,0 +1,7 @@
+RealityGuard 1000+ FPS Benchmark
+========================================
+GPU: NVIDIA L4
+Wall FPS: 363
+GPU FPS: 805
+Latency: 1.242ms
+1000 FPS Target: NOT MET ❌
