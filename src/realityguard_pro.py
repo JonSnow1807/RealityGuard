@@ -43,8 +43,11 @@ class SafetyDetection:
 
 class ContentSafetyAnalyzer:
     """Analyzes content for safety concerns"""
-    
+
     def __init__(self):
+        # Initialize with proper error handling
+        self._initialized = False
+
         # Text patterns to detect (simplified for demo)
         self.text_patterns = {
             'private_info': [
@@ -107,7 +110,7 @@ class ContentSafetyAnalyzer:
             area = cv2.contourArea(contour)
             if 500 < area < 50000:
                 x, y, w, h = cv2.boundingRect(contour)
-                aspect = w / h if h > 0 else 0
+                aspect = w / h  # Potential division by zero
                 
                 if 2 < aspect < 20:  # Text-like aspect ratio
                     regions.append({

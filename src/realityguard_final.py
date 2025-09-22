@@ -35,36 +35,58 @@ class RealityGuardFinal:
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         )
-        
+
+        # Validate cascade loaded successfully
+        if self.face_cascade.empty():
+            raise RuntimeError("Failed to load face cascade classifier")
+
         # Performance settings
         self.scale = 0.3  # Process at 30% resolution
         self.skip_frames = 2
         self.frame_count = 0
-        
-        # Caches
+
+        # Caches with thread safety
+        self._cache_lock = threading.Lock()
+        self._cascade_lock = threading.Lock()  # Protect cascade operations
         self.face_cache = []
         self.screen_cache = []
-        
+
         # User calibration
         self.user_histogram = None
-        
+
         # Metrics
         self.fps_history = deque(maxlen=60)
+        self.last_process_time = time.time()
         
     def calibrate_user(self, frame):
-        """Calibrate to recognize user's face"""
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = self.face_cascade.detectMultiScale(gray, 1.1, 4)
-        
-        if len(faces) > 0:
-            x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
-            face_roi = frame[y:y+h, x:x+w]
-            
-            # Store color histogram
-            hist = cv2.calcHist([face_roi], [0, 1, 2], None, 
-                               [8, 8, 8], [0, 256, 0, 256, 0, 256])
-            self.user_histogram = cv2.normalize(hist, hist).flatten()
-            return True
+        """Calibrate to recognize user's face
+
+        Args:
+            frame: Input frame for calibration
+
+        Returns:
+            bool: True if calibration successful, False otherwise
+        """
+        if frame is None or frame.size == 0:
+            return False
+
+        try:
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            with self._cascade_lock:
+                faces = self.face_cascade.detectMultiScale(gray, 1.1, 4)
+
+            if len(faces) > 0:
+                x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
+                face_roi = frame[y:y+h, x:x+w]
+
+                # Store color histogram
+                hist = cv2.calcHist([face_roi], [0, 1, 2], None,
+                                   [8, 8, 8], [0, 256, 0, 256, 0, 256])
+                self.user_histogram = cv2.normalize(hist, hist).flatten()
+                return True
+        except Exception as e:
+            print(f"Calibration error: {e}")
+
         return False
     
     def detect_faces(self, frame):
@@ -76,7 +98,8 @@ class RealityGuardFinal:
         gray = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
         
         # Detect
-        faces = self.face_cascade.detectMultiScale(gray, 1.2, 3)
+        with self._cascade_lock:
+            faces = self.face_cascade.detectMultiScale(gray, 1.2, 3)
         
         for x, y, w, h in faces:
             # Scale up
