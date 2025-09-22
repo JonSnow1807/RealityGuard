@@ -5,6 +5,7 @@ For Meta Quest 3 and Ray-Ban Meta
 
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import numpy as np
 import cv2
 import time
