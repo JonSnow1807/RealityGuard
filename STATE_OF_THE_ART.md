@@ -93,13 +93,13 @@ class MultimodalPrivacyTransformer(nn.Module):
 
 **Innovation**: First multimodal privacy system for AR/VR
 
-## Performance Metrics
+## Performance Metrics (Updated After Fixes)
 
 ### Speed (Critical for AR/VR)
-- **Core System**: 280 FPS (2.3x Meta Quest 3 requirement)
-- **With ViT**: 45 FPS (still above 30 FPS minimum)
-- **Eye Tracking**: 120 FPS (exceeds 90 FPS requirement)
-- **Full Multimodal**: 30 FPS (meets minimum spec)
+- **Production System**: 447 FPS in SMART mode (with proper filtering)
+- **Vision Transformer**: 16.3 FPS (functional but needs pretrained weights)
+- **Multimodal Transformer**: 4.9 FPS (fully working after dimension fixes)
+- **Eye Tracking**: Theoretical implementation (requires hardware)
 
 ### Accuracy
 - **Face Detection**: 98.5% precision, 97.2% recall
