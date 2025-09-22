@@ -1,0 +1,29 @@
+BRUTAL HONEST PERFORMANCE TEST
+==================================================
+Date: 2025-09-22 20:32:46
+Test: 100 frames with faces and screens
+
+realityguard_1000fps.RealityGuard1000FPS:
+  FPS: 436.7
+  Latency: 2.29ms
+  Success: 100%
+  Blur detected: 0/5
+
+realityguard_1000fps_final.RealityGuard1000FPSFinal:
+  FPS: 395.3
+  Latency: 2.53ms
+  Success: 100%
+  Blur detected: 2/5
+
+realityguard_tensorrt.RealityGuardTensorRT:
+  FPS: 258.8
+  Latency: 3.86ms
+  Success: 100%
+  Blur detected: 0/5
+
+realityguard_1000fps_ultimate.RealityGuard1000FPSUltimate:
+  FPS: 152.4
+  Latency: 6.56ms
+  Success: 100%
+  Blur detected: 5/5
+
