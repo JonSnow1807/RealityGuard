@@ -369,14 +369,14 @@ class RealityGuardImproved:
         start_time = time.time()
 
         try:
-            # Skip processing based on frame interval
+            # Track frame count
             self.frame_count += 1
-            if self.frame_count % self.config.detection.frame_skip_interval != 0:
-                # Return previous result or original frame
-                return frame
 
-            # Process frame
-            processed = self._process_frame_internal(frame)
+            # Check if we should run full detection this frame
+            should_detect = (self.frame_count % self.config.detection.frame_skip_interval == 0)
+
+            # Process frame (detection or cached filtering)
+            processed = self._process_frame_internal(frame, should_detect)
 
             # Log performance
             total_time = time.time() - start_time
@@ -392,11 +392,12 @@ class RealityGuardImproved:
             logger.error(f"Frame processing error: {e}")
             return frame  # Return original on error
 
-    def _process_frame_internal(self, frame: np.ndarray) -> np.ndarray:
+    def _process_frame_internal(self, frame: np.ndarray, should_detect: bool = True) -> np.ndarray:
         """Internal frame processing logic.
 
         Args:
             frame: Input frame
+            should_detect: Whether to run detection or use cached results
 
         Returns:
             Processed frame
@@ -404,21 +405,48 @@ class RealityGuardImproved:
         # Get privacy settings
         privacy_settings = self.config.get_privacy_settings(self.privacy_mode)
 
-        # Downscale for detection
-        height, width = frame.shape[:2]
-        small_frame = cv2.resize(frame, None,
-                                fx=self.config.detection.downscale_factor,
-                                fy=self.config.detection.downscale_factor)
+        # If privacy mode is OFF, return original frame
+        if self.privacy_mode == PrivacyMode.OFF:
+            return frame
 
         output = frame.copy()
 
-        # Face detection and blurring
-        if privacy_settings.get('blur_faces', False):
-            faces = self.face_detector.detect_faces(small_frame)
+        # Initialize cache if needed
+        if not hasattr(self, '_detection_cache'):
+            self._detection_cache = {'faces': [], 'screens': []}
 
-            # Scale back to original size
-            scaled_faces = []
-            scale_factor = 1.0 / self.config.detection.downscale_factor
+        # Only run detection if requested, otherwise use cached results
+        if should_detect:
+            # Downscale for detection
+            height, width = frame.shape[:2]
+            small_frame = cv2.resize(frame, None,
+                                    fx=self.config.detection.downscale_factor,
+                                    fy=self.config.detection.downscale_factor)
+
+            # Face detection
+            if privacy_settings.get('blur_faces', False):
+                faces = self.face_detector.detect_faces(small_frame)
+                # Scale back to original size and cache
+                self._detection_cache['faces'] = self._scale_faces(faces, 1.0 / self.config.detection.downscale_factor)
+            else:
+                self._detection_cache['faces'] = []
+
+            # Screen detection
+            if privacy_settings.get('blur_screens', False):
+                screens = self.screen_detector.detect_screens(small_frame)
+                # Scale and cache
+                scale_factor = 1.0 / self.config.detection.downscale_factor
+                self._detection_cache['screens'] = [(int(x * scale_factor), int(y * scale_factor),
+                                                    int(w * scale_factor), int(h * scale_factor))
+                                                   for x, y, w, h in screens]
+            else:
+                self._detection_cache['screens'] = []
+
+        # Apply cached detections to current frame
+        # Face blurring
+        if privacy_settings.get('blur_faces', False) and self._detection_cache['faces']:
+            faces = self._detection_cache['faces']
+
             for face in faces:
                 x, y, w, h = face.bbox
                 scaled_face = Face(

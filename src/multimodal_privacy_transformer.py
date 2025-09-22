@@ -106,7 +106,7 @@ class TemporalEncoder(nn.Module):
 class BodyLanguageAnalyzer(nn.Module):
     """Analyze body language for privacy-sensitive patterns"""
 
-    def __init__(self, input_dim=768, hidden_dim=512):
+    def __init__(self, input_dim=1024, hidden_dim=512):  # Changed to match transformer output
         super().__init__()
 
         self.pose_encoder = nn.Sequential(
@@ -362,14 +362,21 @@ class MultimodalPrivacySystem:
         tensor = tensor.permute(2, 0, 1).unsqueeze(0)
 
         # Simple CNN features (in production, use pretrained backbone)
+        # Fixed dimensions to match transformer input
         with torch.no_grad():
-            conv1 = F.conv2d(tensor, torch.randn(64, 3, 7, 7).to(self.device), stride=2)
-            pool1 = F.max_pool2d(F.relu(conv1), 3, stride=2)
-            conv2 = F.conv2d(pool1, torch.randn(128, 64, 3, 3).to(self.device), padding=1)
-            pool2 = F.adaptive_avg_pool2d(F.relu(conv2), (1, 1))
-            features = pool2.squeeze(-1).squeeze(-1)
+            # Create proper weight tensors if not initialized
+            if not hasattr(self, '_visual_conv1'):
+                self._visual_conv1 = torch.randn(64, 3, 7, 7).to(self.device)
+                self._visual_conv2 = torch.randn(768, 64, 3, 3).to(self.device)  # Output 768 channels
 
-        return features.repeat(1, 10, 1)  # Repeat for temporal dimension
+            conv1 = F.conv2d(tensor.to(self.device), self._visual_conv1, stride=2)
+            pool1 = F.max_pool2d(F.relu(conv1), 3, stride=2)
+            conv2 = F.conv2d(pool1, self._visual_conv2, padding=1)
+            pool2 = F.adaptive_avg_pool2d(F.relu(conv2), (1, 1))
+            features = pool2.squeeze(-1).squeeze(-1)  # (B, 768)
+
+        # Expand to temporal dimension
+        return features.unsqueeze(1).repeat(1, 10, 1)  # (B, 10, 768)
 
     def extract_audio_features(self, audio_chunk: np.ndarray) -> torch.Tensor:
         """Extract audio features from chunk"""
@@ -391,8 +398,8 @@ class MultimodalPrivacySystem:
     def extract_pose_features(self, frame: np.ndarray) -> Optional[torch.Tensor]:
         """Extract body pose features (placeholder)"""
         # In production, use MediaPipe Pose or similar
-        # For now, return random features
-        return torch.randn(1, 768).to(self.device)
+        # For now, return random features matching expected dimension
+        return torch.randn(1, 1024).to(self.device)  # Match transformer hidden_dim
 
     def detect_privacy_multimodal(self,
                                  frame: np.ndarray,
