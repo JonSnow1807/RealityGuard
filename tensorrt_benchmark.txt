@@ -1,0 +1,9 @@
+RealityGuard TensorRT Benchmark
+========================================
+Date: 2025-09-22 19:34:20
+Device: cuda
+GPU: NVIDIA L4
+CUDA: 12.8
+FPS: 427.9
+Latency: 1.49ms
+Meta Ready (1000+ FPS): NO ❌
