@@ -1,0 +1,34 @@
+{
+  "detection": {
+    "face_scale_factor": 1.1,
+    "face_min_neighbors": 5,
+    "face_min_size": [30, 30],
+    "face_detection_confidence": 0.5,
+    "screen_brightness_threshold": 200,
+    "screen_min_area": 5000,
+    "screen_aspect_ratio_range": [1.0, 2.5],
+    "text_confidence_threshold": 0.7,
+    "inappropriate_content_threshold": 0.8,
+    "skin_exposure_threshold": 0.15,
+    "frame_skip_interval": 2,
+    "detection_cache_duration": 30,
+    "downscale_factor": 0.3,
+    "blur_kernel_size": [21, 21],
+    "pixelation_size": 20
+  },
+  "performance": {
+    "target_fps": 120,
+    "enable_gpu": true,
+    "max_memory_mb": 512,
+    "thread_count": 4,
+    "enable_caching": true,
+    "adaptive_quality": true
+  },
+  "security": {
+    "log_detections": false,
+    "encrypt_logs": true,
+    "store_faces": false,
+    "auto_delete_cache": true,
+    "cache_ttl_seconds": 300
+  }
+}
