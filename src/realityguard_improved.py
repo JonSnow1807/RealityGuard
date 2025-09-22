@@ -17,8 +17,12 @@ from pathlib import Path
 import json
 
 # Import our modules
-from config import Config, PrivacyMode, SafetyMode, get_config
-from face_detector import ModernFaceDetector, FaceBlurrer, Face
+try:
+    from config import Config, PrivacyMode, SafetyMode, get_config
+    from face_detector import ModernFaceDetector, FaceBlurrer, Face
+except ImportError:
+    from .config import Config, PrivacyMode, SafetyMode, get_config
+    from .face_detector import ModernFaceDetector, FaceBlurrer, Face
 
 
 # Configure logging
