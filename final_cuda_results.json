@@ -1,0 +1,30 @@
+{
+  "baseline_single": 88.6968773369287,
+  "optimized_single": 70.41391887819277,
+  "batch_1": 68.42863677550987,
+  "batch_2": 91.53107807674087,
+  "batch_4": 165.5421574151032,
+  "batch_8": 231.6950324330306,
+  "batch_16": 261.0398576897466,
+  "batch_32": 282.5760540866326,
+  "single_stream": 190.18177550337435,
+  "multi_stream": 195.96141791085637,
+  "memory": {
+    "peak_gb": 4.95533561706543,
+    "total_gb": 22.2781982421875,
+    "utilization": 22.242981964680034,
+    "max_batch": 64
+  },
+  "real_world": {
+    "fps": 174.09610578586984,
+    "total_time": 1.7231861599993863,
+    "frames": 300,
+    "real_time_factor": 5.803203526195661
+  },
+  "mobile_projection": {
+    "single_conservative": 7.041391887819278,
+    "single_optimistic": 10.562087831728915,
+    "batch_conservative": 23.169503243303062,
+    "batch_optimistic": 34.75425486495459
+  }
+}

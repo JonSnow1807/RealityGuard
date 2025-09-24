@@ -34,6 +34,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Okay, so can you implement these and then test thoroughly",
+          "pastedContents": {}
+        },
+        {
           "display": "Okay so how should we proceed now, I feel like we are not utilizing CUDA enough, what is your suggestion to move forward",
           "pastedContents": {}
         },
@@ -427,10 +431,6 @@
         },
         {
           "display": "I am still skeptical, whether the numbers are true or not",
-          "pastedContents": {}
-        },
-        {
-          "display": "So please fix it somehow",
           "pastedContents": {}
         }
       ],
