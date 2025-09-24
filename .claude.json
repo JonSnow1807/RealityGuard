@@ -34,6 +34,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Still looks too good to be true, test more carefully for any other issues we might have missed that could trouble us",
+          "pastedContents": {}
+        },
+        {
           "display": "I am even skeptical about this one, thoroughly test the baseline and then this neural approximation with different testing measures and the give the final results",
           "pastedContents": {}
         },
