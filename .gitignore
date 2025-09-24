@@ -29,7 +29,10 @@ wheels/
 *.swp
 *.swo
 *~
+
+# OS
 .DS_Store
+Thumbs.db
 
 # Project specific
 data/videos/*
@@ -40,6 +43,10 @@ data/images/*
 *.trt
 models/*.onnx
 models/*.pt
+*.log
+*.cache
+temp/
+tmp/
 
 # Keep directory structure
 !data/videos/.gitkeep
