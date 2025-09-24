@@ -1,0 +1,17 @@
+{
+  "baseline": {
+    "720p_random": {
+      "avg_fps": 132.82498254128615,
+      "std_fps": 55.87394254905303,
+      "variation_%": 42.06583842891578,
+      "blur_applied": true,
+      "timing_results": {
+        "perf_counter": 164.54301852762117,
+        "process_time": 21.73359259254798,
+        "timeit": 163.59044540538946,
+        "cv2_ticks": 165.32280716407206,
+        "loop_timing": 148.93504901679995
+      },
+      "blur_checks": {
+        "variance_reduction_%": 99.87013642921552,
+        "variance_reduced": 
