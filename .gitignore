@@ -45,3 +45,7 @@ models/*.pt
 !data/videos/.gitkeep
 !data/images/.gitkeep
 !models/.gitkeep
+
+# Claude IDE files
+.claude*
+.coderabbit/
