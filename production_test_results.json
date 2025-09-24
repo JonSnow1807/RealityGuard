@@ -1,0 +1,72 @@
+{
+  "performance": {
+    "Advanced CV": {
+      "Tiny": {
+        "fps": 37.67588865988699,
+        "ms": 26.542174201313173
+      }
+    },
+    "Excellence Vision": {
+      "Tiny": {
+        "fps": 19.103303540313057,
+        "ms": 52.34696699917549
+      },
+      "Small": {
+        "fps": 10.312983731100788,
+        "ms": 96.96514860042953
+      },
+      "Medium": {
+        "fps": 3.7557897555428563,
+        "ms": 266.25558539963095
+      },
+      "HD": {
+        "fps": 1.2782816932507324,
+        "ms": 782.3001810007554
+      }
+    },
+    "State-of-Art": {
+      "Tiny": {
+        "fps": 4.8161391999184815,
+        "ms": 207.6351946008799
+      },
+      "Small": {
+        "fps": 5.333839516115361,
+        "ms": 187.4822062003659
+      },
+      "Medium": {
+        "fps": 2.70854442396256,
+        "ms": 369.20199320084066
+      },
+      "HD": {
+        "fps": 1.0281484060634758,
+        "ms": 972.6222343997506
+      }
+    },
+    "Advanced CV_robustness": "0/5",
+    "Advanced CV_memory_mb": 0.0
+  },
+  "capabilities": {
+    "Advanced CV": [],
+    "Excellence Vision": [
+      "Feature extraction",
+      "Object detection/tracking",
+      "Scene understanding",
+      "3D understanding"
+    ],
+    "State-of-Art": [
+      "Feature extraction",
+      "Depth estimation",
+      "3D understanding"
+    ]
+  },
+  "value_score": 4,
+  "best_system": "Excellence Vision",
+  "best_fps": 1.2782816932507324,
+  "unique_features": [
+    "Feature extraction",
+    "Scene understanding",
+    "Object detection/tracking",
+    "3D understanding",
+    "Depth estimation"
+  ]
+}

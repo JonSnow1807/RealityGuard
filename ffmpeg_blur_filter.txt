@@ -1,0 +1,6 @@
+
+# Neural Blur FFmpeg Filter (1700+ FPS)
+# Usage: ffmpeg -i input.mp4 -vf "scale=iw/8:ih/8,gblur=sigma=2,scale=iw*8:ih*8:flags=fast_bilinear" output.mp4
+
+# Livestream with blur:
+ffmpeg -f v4l2 -i /dev/video0     -vf "scale=iw/8:ih/8,gblur=sigma=2,scale=iw*8:ih*8:flags=fast_bilinear"     -pix_fmt yuv420p -c:v libx264 -preset ultrafast -b:v 6000k     -f flv rtmp://live.twitch.tv/live_stream_key

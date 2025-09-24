@@ -1,0 +1,110 @@
+{
+  "640x480": {
+    "simple_blur": {
+      "avg_fps": 188.53321386010293,
+      "min_fps": 160.5874417029999,
+      "max_fps": 239.4815511770353,
+      "success_rate": 0.8,
+      "times": [
+        0.005976895000003424,
+        0.00532080799985124,
+        0.006227137000223593,
+        0.004175687000042672,
+        0.004819998999664676
+      ]
+    },
+    "vit_simulation": {
+      "fps": 16.645810575783777,
+      "note": "Simulated ViT operations without model weights"
+    },
+    "gpu": {
+      "cuda_available": true,
+      "gpu_time": 0.0578869199998735,
+      "memory_used": 4608000,
+      "gpu_name": "NVIDIA L4"
+    },
+    "caching": {
+      "cold_cache_time": 0.003228062999824033,
+      "warm_cache_time": 0.0033258419999583565,
+      "speedup_from_cache": 0.9706002269092916,
+      "variance": 0.0007020410110934693
+    }
+  },
+  "1280x720": {
+    "simple_blur": {
+      "avg_fps": 97.13521631859123,
+      "min_fps": 88.00385175282968,
+      "max_fps": 130.6765228107011,
+      "success_rate": 0.8,
+      "times": [
+        0.00765248400011842,
+        0.011316068000269297,
+        0.011363138999968214,
+        0.01007796000021699,
+        0.011064986000292265
+      ]
+    },
+    "mediapipe": {
+      "fps": 44.431217765211684,
+      "details": {
+        "faces_detected": false,
+        "num_faces": 0
+      }
+    },
+    "vit_simulation": {
+      "fps": 32.205687678825726,
+      "note": "Simulated ViT operations without model weights"
+    },
+    "gpu": {
+      "cuda_available": true,
+      "gpu_time": 0.0014588760000151524,
+      "memory_used": 13824000,
+      "gpu_name": "NVIDIA L4"
+    },
+    "caching": {
+      "cold_cache_time": 0.013223485000253277,
+      "warm_cache_time": 0.011647419200016884,
+      "speedup_from_cache": 1.1353145940032885,
+      "variance": 0.0008580835146558038
+    }
+  },
+  "1920x1080": {
+    "simple_blur": {
+      "avg_fps": 60.371864605208536,
+      "min_fps": 54.97310028786471,
+      "max_fps": 72.43529789392585,
+      "success_rate": 0.8,
+      "times": [
+        0.013805424000111088,
+        0.018190714999946067,
+        0.017293299999892042,
+        0.01729546400019899,
+        0.016235133000009228
+      ]
+    },
+    "vit_simulation": {
+      "fps": 24.979780116998,
+      "note": "Simulated ViT operations without model weights"
+    },
+    "gpu": {
+      "cuda_available": true,
+      "gpu_time": 0.0018834200000128476,
+      "memory_used": 31386624,
+      "gpu_name": "NVIDIA L4"
+    },
+    "caching": {
+      "cold_cache_time": 0.01705941399995936,
+      "warm_cache_time": 0.015258183200012354,
+      "speedup_from_cache": 1.1180501489814036,
+      "variance": 0.0019270264086564102
+    }
+  },
+  "system_info": {
+    "cpu_count": 8,
+    "cpu_freq": 2200.208,
+    "ram_gb": 31.341087341308594,
+    "opencv_version": "4.12.0",
+    "numpy_version": "1.24.3",
+    "torch_version": "2.7.1+cu128"
+  }
+}

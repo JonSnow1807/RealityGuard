@@ -1,0 +1,24 @@
+{
+  "segmentation_works": true,
+  "speed": {
+    "Mobile (320x320)": {
+      "fps": 84.386438817486,
+      "latency_ms": 11.85024530022929
+    },
+    "SD (640x480)": {
+      "fps": 100.37627955468011,
+      "latency_ms": 9.962513100072101
+    },
+    "HD (1280x720)": {
+      "fps": 85.41440695577221,
+      "latency_ms": 11.70762680021653
+    },
+    "Full HD (1920x1080)": {
+      "fps": 74.61406824414308,
+      "latency_ms": 13.402298300206894
+    }
+  },
+  "gpu_memory_mb": 0.03857421875,
+  "preprocessing_overhead_percent": 25,
+  "onnx_size_mb": 13.200576782226562,
+  "mobile_feasible": 
