@@ -1,0 +1,20 @@
+{
+  "baseline_fps": 64.60910299038163,
+  "optimized": {
+    "Conservative": {
+      "fps": 6.8604260728098705,
+      "skip_rate": 0.8,
+      "speedup": 5.000000000000001
+    },
+    "Balanced": {
+      "fps": 7.963056482425364,
+      "skip_rate": 0.75,
+      "speedup": 4.0
+    },
+    "Aggressive": {
+      "fps": 10.487544529615707,
+      "skip_rate": 0.5166666666666667,
+      "speedup": 2.0689655172413794
+    }
+  }
+}
