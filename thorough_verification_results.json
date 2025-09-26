@@ -1,6 +1,6 @@
 {
   "test_id": "thorough_verification_v3",
-  "timestamp": "2025-09-26 03:06:30",
+  "timestamp": "2025-09-26 04:43:17",
   "environment": {
     "gpu": "NVIDIA L4",
     "cuda": "12.8",
@@ -15,8 +15,8 @@
       "tests": [
         {
           "test": "SAM2 Segmentation Speed",
-          "sam2_only_fps": 89.77,
-          "with_diffusion_fps": 92.99,
+          "sam2_only_fps": 97.88,
+          "with_diffusion_fps": 101.66,
           "diffusion_latency_ms": 50.0,
           "achieves_realtime": true
         },

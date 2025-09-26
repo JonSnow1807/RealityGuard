@@ -8,21 +8,21 @@
         {
           "test": "Basic Functionality",
           "status": "SUCCESS",
-          "fps": 25.61,
+          "fps": 26.03,
           "frames_processed": 30,
           "notes": "Simulated diffusion inpainting due to API limits"
         },
         {
           "test": "Performance Under Load",
           "status": "SUCCESS",
-          "fps": 97.52,
+          "fps": 104.32,
           "frames_processed": 100,
           "feasibility": "HIGH"
         }
       ],
       "summary": {
         "viable": true,
-        "average_fps": 61.565,
+        "average_fps": 65.175,
         "recommendation": "HIGHLY FEASIBLE - Can achieve real-time with optimization"
       }
     },
@@ -56,21 +56,21 @@
         {
           "test": "Rendering Performance",
           "status": "SUCCESS",
-          "fps": 20265.28,
+          "fps": 21357.01,
           "num_gaussians": 100000,
           "notes": "Simplified Gaussian splatting simulation"
         },
         {
           "test": "Mobile Feasibility",
           "status": "SUCCESS",
-          "mobile_fps_estimate": 2026.53,
+          "mobile_fps_estimate": 2135.7,
           "memory_mb": 5.34,
           "feasibility": "HIGH"
         }
       ],
       "summary": {
         "viable": true,
-        "average_fps": 20265.28,
+        "average_fps": 21357.01,
         "recommendation": "PROMISING - Needs optimization for mobile but shows potential"
       }
     },
@@ -102,13 +102,13 @@
         {
           "test": "Multimodal Integration",
           "status": "SUCCESS",
-          "fps": 92.81,
+          "fps": 96.82,
           "modalities": [
             "vision",
             "audio",
             "context"
           ],
-          "privacy_decisions": 16,
+          "privacy_decisions": 15,
           "accuracy_estimate": "85%"
         },
         {
@@ -127,15 +127,15 @@
             },
             "public": {
               "threshold": 0.3,
-              "privacy_rate": 0.6
+              "privacy_rate": 0.8
             },
             "office": {
               "threshold": 0.5,
-              "privacy_rate": 0.8
+              "privacy_rate": 0.7
             },
             "home": {
               "threshold": 0.5,
-              "privacy_rate": 0.3
+              "privacy_rate": 0.6
             }
           },
           "feasibility": "HIGH"

@@ -1,0 +1,26 @@
+{
+  "test_date": "2025-09-26 04:45:27",
+  "gpu_info": {
+    "gpu_available": true,
+    "gpu_name": "NVIDIA L4",
+    "memory_gb": 22.3,
+    "cuda_version": "12.8",
+    "performance_gflops": 11210.6
+  },
+  "optimized_blur": [
+    {
+      "config": "High Quality",
+      "settings": {
+        "name": "High Quality",
+        "interval": 1,
+        "scale": 1.0,
+        "kernel": 31
+      },
+      "runs": [
+        22.470474082430705,
+        29.092142073016323,
+        28.934841835110504
+      ],
+      "avg_fps": 26.83,
+      "std_fps": 3.09,
+      "real_time": 
