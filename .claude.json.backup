@@ -36,6 +36,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "I want you to try and test all the 5 approaches, then document your findings and push to github under my name only, email is cshrivastava2000@gmail.com, github repo: https://github.com/JonSnow1807/RealityGuard, but make sure to test thoroughly and twice, cuz you always make a mistake in testing",
+          "pastedContents": {}
+        },
+        {
           "display": "Please research properly, it's ept 2025, look for research papers or anything or just like a wrapper, but I want something groundbreaking",
           "pastedContents": {}
         },
@@ -429,10 +433,6 @@
         },
         {
           "display": "/init ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Yes, please test it thoroughly on real world scenarios",
           "pastedContents": {}
         }
       ],

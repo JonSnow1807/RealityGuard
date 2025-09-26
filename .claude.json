@@ -36,6 +36,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "I don't trust you, test again thoroughly and then verify",
+          "pastedContents": {}
+        },
+        {
           "display": "I want you to try and test all the 5 approaches, then document your findings and push to github under my name only, email is cshrivastava2000@gmail.com, github repo: https://github.com/JonSnow1807/RealityGuard, but make sure to test thoroughly and twice, cuz you always make a mistake in testing",
           "pastedContents": {}
         },
@@ -429,10 +433,6 @@
         },
         {
           "display": "which claude model is this",
-          "pastedContents": {}
-        },
-        {
-          "display": "/init ",
           "pastedContents": {}
         }
       ],

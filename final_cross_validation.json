@@ -1,0 +1,15 @@
+{
+  "validation_type": "cross_validation",
+  "approaches": {
+    "sam2": {
+      "approach": "SAM2 + Diffusion",
+      "fps_values": [
+        25.61,
+        97.52,
+        93.67,
+        89.77,
+        92.99
+      ],
+      "mean_fps": 79.912,
+      "min_fps": 25.61,
+      "realtime": 
