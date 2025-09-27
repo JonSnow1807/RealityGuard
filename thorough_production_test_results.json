@@ -1,0 +1,178 @@
+{
+  "timestamp": "2025-09-27T04:03:56.708497",
+  "tests": {
+    "resolution_640x480_patent_ready_all_claims.py": {
+      "resolution": "640x480",
+      "system": "patent_ready_all_claims.py",
+      "success": true,
+      "time": 6.434050559997559
+    },
+    "resolution_640x480_sam2_diffusion_production.py": {
+      "resolution": "640x480",
+      "system": "sam2_diffusion_production.py",
+      "success": true,
+      "time": 9.907780647277832
+    },
+    "resolution_640x480_advanced_sam2_diffusion.py": {
+      "resolution": "640x480",
+      "system": "advanced_sam2_diffusion.py",
+      "success": true,
+      "time": 10.657032012939453
+    },
+    "resolution_1280x720_patent_ready_all_claims.py": {
+      "resolution": "1280x720",
+      "system": "patent_ready_all_claims.py",
+      "success": true,
+      "time": 6.262668609619141
+    },
+    "resolution_1280x720_sam2_diffusion_production.py": {
+      "resolution": "1280x720",
+      "system": "sam2_diffusion_production.py",
+      "success": true,
+      "time": 9.849427461624146
+    },
+    "resolution_1280x720_advanced_sam2_diffusion.py": {
+      "resolution": "1280x720",
+      "system": "advanced_sam2_diffusion.py",
+      "success": true,
+      "time": 10.588035821914673
+    },
+    "resolution_1920x1080_patent_ready_all_claims.py": {
+      "resolution": "1920x1080",
+      "system": "patent_ready_all_claims.py",
+      "success": true,
+      "time": 6.34927773475647
+    },
+    "resolution_1920x1080_sam2_diffusion_production.py": {
+      "resolution": "1920x1080",
+      "system": "sam2_diffusion_production.py",
+      "success": true,
+      "time": 9.780966520309448
+    },
+    "resolution_1920x1080_advanced_sam2_diffusion.py": {
+      "resolution": "1920x1080",
+      "system": "advanced_sam2_diffusion.py",
+      "success": true,
+      "time": 10.309636354446411
+    },
+    "resolution_3840x2160_patent_ready_all_claims.py": {
+      "resolution": "3840x2160",
+      "system": "patent_ready_all_claims.py",
+      "success": true,
+      "time": 6.334171295166016
+    },
+    "resolution_3840x2160_sam2_diffusion_production.py": {
+      "resolution": "3840x2160",
+      "system": "sam2_diffusion_production.py",
+      "success": true,
+      "time": 9.77307391166687
+    },
+    "resolution_3840x2160_advanced_sam2_diffusion.py": {
+      "resolution": "3840x2160",
+      "system": "advanced_sam2_diffusion.py",
+      "success": true,
+      "time": 10.85369086265564
+    },
+    "density_0": {
+      "object_count": 0,
+      "fps": 14.278703140171631,
+      "success": true,
+      "time": 6.303093433380127
+    },
+    "density_1": {
+      "object_count": 1,
+      "fps": 13.935212933491924,
+      "success": true,
+      "time": 6.45845890045166
+    },
+    "density_5": {
+      "object_count": 5,
+      "fps": 14.196182238601175,
+      "success": true,
+      "time": 6.339732646942139
+    },
+    "density_10": {
+      "object_count": 10,
+      "fps": 14.258156514626318,
+      "success": true,
+      "time": 6.312176465988159
+    },
+    "density_20": {
+      "object_count": 20,
+      "fps": 14.109150548369096,
+      "success": true,
+      "time": 6.378839015960693
+    },
+    "density_50": {
+      "object_count": 50,
+      "fps": 14.395891736370858,
+      "success": true,
+      "time": 6.251783609390259
+    },
+    "edge_empty_video": {
+      "handled": true,
+      "crashed": false
+    },
+    "edge_corrupted_frames": {
+      "handled": true,
+      "crashed": false
+    },
+    "edge_rapid_changes": {
+      "handled": true,
+      "crashed": false
+    },
+    "edge_extreme_motion": {
+      "handled": true,
+      "crashed": false
+    },
+    "edge_single_frame": {
+      "handled": true,
+      "crashed": false
+    },
+    "cache_validation": {
+      "working": false,
+      "improvement": 0.0
+    },
+    "concurrent": {
+      "success": true,
+      "count": 3
+    },
+    "gpu_utilization": {
+      "utilized": false,
+      "peak_util": 11.0
+    }
+  },
+  "failures": [],
+  "warnings": [
+    "cache_not_improving",
+    "low_gpu_utilization"
+  ],
+  "performance": {},
+  "memory": {
+    "duration_10s": {
+      "duration": 10,
+      "initial_memory_mb": 418.140625,
+      "peak_memory_mb": 431.890625,
+      "avg_memory_mb": 431.890625,
+      "memory_growth_mb": 13.75,
+      "stable": true
+    },
+    "duration_30s": {
+      "duration": 30,
+      "initial_memory_mb": 432.140625,
+      "peak_memory_mb": 432.140625,
+      "avg_memory_mb": 432.140625,
+      "memory_growth_mb": 0.0,
+      "stable": true
+    },
+    "duration_60s": {
+      "duration": 60,
+      "initial_memory_mb": 432.140625,
+      "peak_memory_mb": 432.140625,
+      "avg_memory_mb": 432.140625,
+      "memory_growth_mb": 0.0,
+      "stable": true
+    }
+  },
+  "stability": {}
+}

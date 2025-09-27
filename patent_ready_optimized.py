@@ -819,8 +819,8 @@ def main():
     import json
     results = {
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "patent_ready": all(claims.values()),
-        "claims_validated": claims,
+        "patent_ready": bool(all(claims.values())),
+        "claims_validated": {k: bool(v) for k, v in claims.items()},
         "system": "SAM2+Diffusion Hybrid",
         "performance": "30-45 FPS validated"
     }

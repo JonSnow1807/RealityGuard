@@ -1,0 +1,31 @@
+{
+  "start_time": "2025-09-27T04:11:28.664022",
+  "end_time": "2025-09-27T04:11:35.699977",
+  "checkpoints": [],
+  "memory_samples": [
+    {
+      "timestamp": 1758946289.6927042,
+      "cpu_percent": 172.9,
+      "memory_mb": 358.046875,
+      "gpu_util": 0.0,
+      "gpu_memory_mb": 0.0
+    }
+  ],
+  "fps_samples": [
+    30.0,
+    15.1,
+    32.7,
+    42.1,
+    47.4,
+    48.6,
+    24.0
+  ],
+  "errors": [],
+  "summary": {
+    "memory_stable": true,
+    "memory_growth_mb": 0.0,
+    "performance_stable": false,
+    "avg_fps": 34.27142857142857,
+    "verdict": "NEEDS_OPTIMIZATION"
+  }
+}

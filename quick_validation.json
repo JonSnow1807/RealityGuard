@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-09-26 17:25:51",
+  "cuda": true,
+  "tests": [
+    {
+      "test": "import",
+      "status": "PASS"
+    },
+    {
+      "test": "single_frame",
+      "status": "PASS",
+      "time_ms": 920.0108051300049,
+      "fps_estimate": 1.0869437559037058
+    },
+    {
+      "test": "video_processing",
+      "status": "PASS",
+      "avg_fps": 74.06707990668279,
+      "min_fps": 51.251927612204746,
+      "real_time": 
