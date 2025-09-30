@@ -465,6 +465,9 @@ class PrivacyGenerator:
         # Apply quality-based smoothing
         if quality < 0.8:
             kernel_size = int(5 * (1 - quality) + 3)
+            # Ensure kernel size is odd
+            if kernel_size % 2 == 0:
+                kernel_size += 1
             synthetic = cv2.GaussianBlur(synthetic, (kernel_size, kernel_size), 0)
 
         return synthetic

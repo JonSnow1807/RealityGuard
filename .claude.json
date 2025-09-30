@@ -37,6 +37,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "okay so push the final one",
+          "pastedContents": {}
+        },
+        {
+          "display": "I still don't trust you, thoroughly test the system and determine whther it is actually A+ worthy or not",
+          "pastedContents": {}
+        },
+        {
           "display": "I want you to thoroughly check the whole production system properly and if everything is correct push it to my github",
           "pastedContents": {}
         },
@@ -426,14 +434,6 @@
         },
         {
           "display": "Still looks too good to be true, test more carefully for any other issues we might have missed that could trouble us",
-          "pastedContents": {}
-        },
-        {
-          "display": "I am even skeptical about this one, thoroughly test the baseline and then this neural approximation with different testing measures and the give the final results",
-          "pastedContents": {}
-        },
-        {
-          "display": "I want you to thoroughly test all the methods again, so as to not leave any margin for error",
           "pastedContents": {}
         }
       ],
