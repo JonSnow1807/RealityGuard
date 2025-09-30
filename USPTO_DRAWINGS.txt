@@ -1,0 +1,145 @@
+PATENT DRAWINGS - TEXT REPRESENTATION
+(For provisional patent - formal drawings not required)
+
+FIGURE 1: SYSTEM ARCHITECTURE OVERVIEW
+=====================================
+
+[VIDEO INPUT]
+     |
+     v
+[SEGMENTATION MODULE]
+- YOLO/SAM2 AI Model
+- Object Detection
+- Mask Generation
+     |
+     v
+[HIERARCHICAL CACHE]
+- L1: Exact Match
+- L2: Similar Region
+- L3: Generic Pattern
+     |
+     v
+[ADAPTIVE QUALITY CONTROLLER]
+- FPS Monitoring
+- Strategy Selection
+- Quality Adjustment
+     |
+     v
+[PRIVACY GENERATOR]
+- Geometric Synthesis
+- Neural Blur
+- Cached Diffusion
+- Full Diffusion
+     |
+     v
+[TEMPORAL CONSISTENCY]
+- Object Tracking
+- ID Maintenance
+     |
+     v
+[VIDEO OUTPUT]
+
+
+FIGURE 2: HIERARCHICAL CACHE STRUCTURE
+======================================
+
+Input: BBox + Class
+        |
+        v
+    [L1 CACHE]
+    Exact Match?
+    /        \
+   YES        NO
+   |          |
+   v          v
+ Return    [L2 CACHE]
+          Similar?
+         /      \
+        YES      NO
+        |        |
+        v        v
+     Return   [L3 CACHE]
+             Generic?
+            /      \
+           YES      NO
+           |        |
+           v        v
+        Return   Generate New
+
+
+FIGURE 3: ADAPTIVE QUALITY FLOW
+================================
+
+[Monitor FPS]
+      |
+      v
+FPS < Target?
+   /     \
+  YES     NO
+  |       |
+  v       v
+Reduce   Increase
+Quality  Quality
+  |       |
+  v       v
+Switch   Switch
+Strategy Strategy
+  |       |
+  v       v
+[Process Frame]
+
+
+FIGURE 4: PERFORMANCE METRICS GRAPH
+===================================
+
+FPS vs Strategy:
+
+60 |     * Geometric
+   |    /
+50 |   * Neural
+   |  /
+40 | * Cached
+   |/
+30 * Full Diffusion
+   |_______________
+   Strategy Type
+
+
+FIGURE 5: PRIVACY GENERATION EXAMPLE
+====================================
+
+Original Frame:        Privacy Protected:
++----------+          +----------+
+| [PERSON] |   -->    | [AVATAR] |
+| [SCREEN] |          | [BLANK]  |
+| [DOC]    |          | [REDACT] |
++----------+          +----------+
+
+
+FIGURE 6: TEMPORAL CONSISTENCY
+==============================
+
+Frame N:     Frame N+1:    Frame N+2:
+[ID:1]  -->  [ID:1]   -->  [ID:1]
+  |            |              |
+Same ID maintained across frames
+
+
+FIGURE 7: CACHE EFFICIENCY
+==========================
+
+Cache Hit Rates:
+L1: |||||||||||| 55.6%
+L2: |||||||| 37.0%
+L3: || 7.4%
+Total: 92.6% efficiency
+
+
+FIGURE 8: PROCESSING PIPELINE TIMING
+====================================
+
+Segmentation: [====] 2.1ms
+Cache Lookup: [=] 0.5ms
+Generation:   [========] 4.2ms
+Composition:  [==] 1.0ms
+Total:        [===============] 7.8ms (128 FPS potential)

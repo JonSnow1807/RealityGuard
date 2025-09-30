@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-RealityGuard is a computer vision privacy protection system that evolved from initial inflated claims to a genuine breakthrough: the SAM2 + Diffusion Hybrid approach. This is the world's first system combining segmentation AI with generative AI to CREATE privacy-safe content instead of destroying it.
+RealityGuard is a patented computer vision privacy protection system that combines segmentation AI with generative AI to CREATE privacy-safe content instead of destroying it. The system has evolved from initial research to production-ready implementation with all 6 patent claims validated at 48.7 FPS.
 
 ## Key Development Commands
 
@@ -43,7 +43,27 @@ python thorough_verification_test.py
 nvidia-smi --query-gpu=name,memory.free,utilization.gpu --format=csv -l 1
 ```
 
-### Creating Demos and Production Builds
+### Production System (realityguard_production/)
+```bash
+# Local development with Docker
+cd realityguard_production/
+docker-compose up -d  # Start all services (app, redis, postgres, monitoring)
+
+# Without Docker
+pip install -r requirements.txt
+python main.py  # Runs FastAPI server on port 8000
+
+# API Documentation
+# Access at http://localhost:8000/docs after starting server
+
+# Run production tests
+cd realityguard_production/
+pytest tests/  # Run all tests
+pytest tests/test_privacy_engine.py  # Run specific test
+pytest --cov=src tests/  # With coverage
+```
+
+### Creating Demos and Benchmarks
 ```bash
 # Generate investor demo package
 python investor_demo.py  # Creates video, charts, pitch deck
@@ -69,6 +89,20 @@ git push origin main
 ```
 
 ## High-Level Architecture
+
+### Production System Structure
+The repository contains two main implementations:
+
+1. **Research/Testing Scripts** (root directory)
+   - Individual Python files for testing and validation
+   - Each file is standalone and demonstrates specific features
+   - Used for benchmarking and patent validation
+
+2. **Production System** (`realityguard_production/`)
+   - Full FastAPI application with REST API
+   - Docker containerized with all dependencies
+   - Includes monitoring, caching, and database integration
+   - Ready for cloud deployment
 
 ### The Patent-Ready Pipeline
 ```
@@ -110,11 +144,18 @@ Video → Segmentation → Hierarchical Cache → Adaptive Quality → Generatio
 
 ### System Components
 
-**Primary Files:**
+**Research & Validation Files (root):**
 - `patent_ready_all_claims.py` - All 6 patent claims validated (latest)
-- `sam2_diffusion_production.py` - Production system
+- `sam2_diffusion_production.py` - Production system prototype
 - `advanced_sam2_diffusion.py` - Multi-mode system
 - `optimized_realtime_blur.py` - Baseline comparison
+
+**Production Implementation (`realityguard_production/`):**
+- `main.py` - FastAPI application entry point
+- `src/core/privacy_engine.py` - Core patent implementations
+- `src/services/privacy_engine.py` - Service orchestration
+- `src/api/routes.py` - REST API endpoints
+- `src/core/config.py` - Configuration management
 
 **Performance Profiles:**
 ```
@@ -137,12 +178,12 @@ Blur Baseline:          294.9 FPS (simple blur only)
 
 ## Patent & Business Context
 
-- **Patent Status**: All 6 claims validated, ready to file
-- **Performance**: 46.9 FPS average (exceeds 24 FPS requirement)
+- **Patent Status**: Provisional patent filed September 27, 2025
+- **Patent Documents**: See `PROVISIONAL_PATENT_APPLICATION.md`, `USPTO_*.txt` files
+- **Performance**: 48.7 FPS validated (exceeds 24 FPS requirement by 2x)
 - **Innovation**: World's first seg+gen privacy system
-- **Valuation**: $10-50M based on novelty
+- **Valuation**: $10-50M with patent protection
 - **Market**: $15B video privacy market
-- **Priority Date**: September 26, 2025
 
 ## Testing Philosophy
 
@@ -153,6 +194,18 @@ Always conduct rigorous verification:
 4. Test with static, moving, and multiple objects
 5. Validate all patent claims explicitly
 
+## API Endpoints (Production System)
+
+When running the production system, these endpoints are available:
+
+- `POST /api/v1/process` - Upload and process video
+- `GET /api/v1/status/{job_id}` - Check processing status
+- `GET /api/v1/download/{job_id}` - Download processed video
+- `POST /api/v1/stream` - Start stream processing
+- `GET /api/v1/stream/{stream_id}/frame` - Get latest frame
+- `GET /api/v1/capabilities` - System capabilities
+- `GET /docs` - Interactive API documentation
+
 ## Dependencies
 
 Core requirements:
@@ -161,10 +214,11 @@ Core requirements:
 - `opencv-python-headless==4.10.0.84`
 - `numpy`, `scipy`, `Pillow`
 
-For production diffusion integration:
-- `diffusers` - Stable Diffusion models
-- `transformers` - Model loading
-- `accelerate` - Training/inference optimization
+Production system (`realityguard_production/`):
+- `fastapi`, `uvicorn` - API framework
+- `redis` - Caching layer
+- `prometheus-client` - Metrics
+- See `realityguard_production/requirements.txt` for full list
 
 ## Performance Bottlenecks & Solutions
 

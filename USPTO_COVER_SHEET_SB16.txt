@@ -1,0 +1,37 @@
+PROVISIONAL APPLICATION FOR PATENT COVER SHEET
+(Form PTO/SB/16)
+
+Title of Invention:
+SYSTEM AND METHOD FOR REAL-TIME PRIVACY PROTECTION USING AI-BASED CONTENT GENERATION
+
+Inventor Information:
+Name: Chinmay Shrivastava
+Residence: Boston, MA
+Citizenship: India
+Mailing Address: 7 Ocean View Dr, Dorchester, MA 02125
+Email: cshrivastava2000@gmail.com
+
+Correspondence Address:
+[FILL IN YOUR COMPLETE ADDRESS FOR USPTO CORRESPONDENCE]
+Email: cshrivastava2000@gmail.com
+
+Entity Status (check one):
+[ ] Large Entity
+[ ] Small Entity (less than 500 employees)
+[ ] Micro Entity (gross income less than $212,352)
+
+Docket Number: REALITYGUARD-001
+
+The invention was made by an agency of the United States Government or under a contract with an agency of the United States Government:
+[ ] No
+[ ] Yes, the name of the U.S. Government agency and Government contract number are:
+
+EFS-Web Provisional Application Checklist:
+[X] Specification (attached as separate document)
+[X] Drawings (if applicable - recommended but not required)
+[X] Filing Fee
+[X] Cover Sheet (this document)
+
+Filing Date Requested: September 27, 2025
+
+WARNING: Fill in ALL bracketed fields before uploading to USPTO!

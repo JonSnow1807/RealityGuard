@@ -1,0 +1,79 @@
+# RealityGuard Production Requirements
+# Patent-Protected Privacy System
+
+# Core Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+
+# Computer Vision & ML
+opencv-python-headless==4.10.0.84
+numpy==1.24.3
+scipy==1.11.4
+Pillow==10.1.0
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.3.189
+
+# Async Support
+aiofiles==23.2.1
+aiohttp==3.9.1
+asyncio==3.4.3
+
+# API & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+email-validator==2.1.0
+httpx==0.25.2
+
+# Database & Cache (optional)
+redis==5.0.1
+motor==3.3.2  # MongoDB async driver
+sqlalchemy==2.0.23
+alembic==1.13.0
+
+# Monitoring & Metrics
+prometheus-client==0.19.0
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0
+opentelemetry-instrumentation-fastapi==0.43b0
+
+# Logging
+python-json-logger==2.0.7
+loguru==0.7.2
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2  # For API testing
+
+# Development Tools
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.5.0
+
+# Environment Management
+python-dotenv==1.0.0
+
+# Video Processing Optimization
+ffmpeg-python==0.2.0
+imageio==2.33.0
+imageio-ffmpeg==0.4.9
+
+# Optional: Advanced ML Features
+# diffusers==0.24.0  # For full diffusion mode
+# transformers==4.35.2  # For advanced models
+# accelerate==0.25.0  # GPU optimization
+
+# Production Server
+gunicorn==21.2.0
+supervisor==4.2.5
+
+# Cloud Storage (optional)
+boto3==1.34.0  # AWS S3
+google-cloud-storage==2.13.0  # GCS
+azure-storage-blob==12.19.0  # Azure
