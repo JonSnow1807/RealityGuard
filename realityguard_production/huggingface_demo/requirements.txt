@@ -1,0 +1,7 @@
+# Hugging Face Space Requirements
+gradio==4.19.0
+opencv-python-headless==4.10.0.84
+numpy==1.24.3
+torch>=2.0.0
+ultralytics>=8.3.189
+pillow>=10.0.0
