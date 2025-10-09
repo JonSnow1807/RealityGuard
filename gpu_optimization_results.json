@@ -1,0 +1,242 @@
+{
+  "timestamp": "2025-09-30 15:34:02",
+  "results": [
+    {
+      "scenario": "720p Single",
+      "results": [
+        {
+          "name": "Parallel (4 streams)",
+          "avg_time_ms": 43.523406982421875,
+          "std_time_ms": 2.035260518754983,
+          "fps": 22.976142479008537,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 1.170210816,
+          "gpu_utilization_pct": 0.34078536322869957
+        },
+        {
+          "name": "Mixed Precision (FP16)",
+          "avg_time_ms": 69.0742015838623,
+          "std_time_ms": 2.8395205813716977,
+          "fps": 14.477185071562642,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 1.105199104,
+          "gpu_utilization_pct": 0.34078536322869957
+        },
+        {
+          "name": "Dynamic Batching",
+          "avg_time_ms": 34.41505432128906,
+          "std_time_ms": 0.6756733636403224,
+          "fps": 29.057051331788905,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 0.494927872,
+          "gpu_utilization_pct": 0.34078536322869957
+        },
+        {
+          "name": "Memory Pre-allocated",
+          "avg_time_ms": 32.216787338256836,
+          "std_time_ms": 2.9673099973748136,
+          "fps": 31.0397181910351,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 0.6291456,
+          "gpu_utilization_pct": 0.34078536322869957
+        },
+        {
+          "name": "Pipeline Overlapping",
+          "avg_time_ms": 28.672313690185547,
+          "std_time_ms": 4.0488775690296,
+          "fps": 34.876850567601636,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 0.358612992,
+          "gpu_utilization_pct": 0.34078536322869957
+        },
+        {
+          "name": "Combined Optimizations",
+          "avg_time_ms": 34.60402488708496,
+          "std_time_ms": 2.288619243384891,
+          "fps": 28.89837246571926,
+          "gpu_allocated_gb": 0.075995136,
+          "gpu_reserved_gb": 0.423624704,
+          "gpu_utilization_pct": 0.34078536322869957
+        }
+      ]
+    },
+    {
+      "scenario": "720p Batch-4",
+      "results": [
+        {
+          "name": "Parallel (4 streams)",
+          "avg_time_ms": 173.52395057678223,
+          "std_time_ms": 10.093626656172376,
+          "fps": 23.05157291949764,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 4.0370176,
+          "gpu_utilization_pct": 0.3518059910313901
+        },
+        {
+          "name": "Mixed Precision (FP16)",
+          "avg_time_ms": 264.43519592285156,
+          "std_time_ms": 5.193734715306758,
+          "fps": 15.126579448096583,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 1.675624448,
+          "gpu_utilization_pct": 0.3518059910313901
+        },
+        {
+          "name": "Dynamic Batching",
+          "avg_time_ms": 384.13524627685547,
+          "std_time_ms": 502.05680406080944,
+          "fps": 10.412999168311424,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 1.738539008,
+          "gpu_utilization_pct": 0.3518059910313901
+        },
+        {
+          "name": "Memory Pre-allocated",
+          "avg_time_ms": 133.4869384765625,
+          "std_time_ms": 7.072978392101377,
+          "fps": 29.96547861274319,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 0.662700032,
+          "gpu_utilization_pct": 0.3518059910313901
+        },
+        {
+          "name": "Pipeline Overlapping",
+          "avg_time_ms": 103.5377025604248,
+          "std_time_ms": 14.960558450332888,
+          "fps": 38.63326982425163,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 0.392167424,
+          "gpu_utilization_pct": 0.3518059910313901
+        },
+        {
+          "name": "Combined Optimizations",
+          "avg_time_ms": 444.1009521484375,
+          "std_time_ms": 604.7929341296967,
+          "fps": 9.006961098932814,
+          "gpu_allocated_gb": 0.078452736,
+          "gpu_reserved_gb": 1.820327936,
+          "gpu_utilization_pct": 0.3518059910313901
+        }
+      ]
+    },
+    {
+      "scenario": "1080p Single",
+      "results": [
+        {
+          "name": "Parallel (4 streams)",
+          "avg_time_ms": 58.57987403869629,
+          "std_time_ms": 2.2135160922412433,
+          "fps": 17.070709290693028,
+          "gpu_allocated_gb": 0.079271936,
+          "gpu_reserved_gb": 1.13246208,
+          "gpu_utilization_pct": 0.355479533632287
+        },
+        {
+          "name": "Mixed Precision (FP16)",
+          "avg_time_ms": 78.86457443237305,
+          "std_time_ms": 3.0397002806544178,
+          "fps": 12.679964447884105,
+          "gpu_allocated_gb": 0.079271936,
+          "gpu_reserved_gb": 1.690304512,
+          "gpu_utilization_pct": 0.355479533632287
+        },
+        {
+          "name": "Dynamic Batching",
+          "avg_time_ms": 48.1144905090332,
+          "std_time_ms": 2.7162023121559984,
+          "fps": 20.78375951652769,
+          "gpu_allocated_gb": 0.079271936,
+          "gpu_reserved_gb": 0.543162368,
+          "gpu_utilization_pct": 0.355479533632287
+        },
+        {
+          "name": "Memory Pre-allocated",
+          "avg_time_ms": 45.613861083984375,
+          "std_time_ms": 3.4007966304401243,
+          "fps": 21.92316055329754,
+          "gpu_allocated_gb": 0.078780416,
+          "gpu_reserved_gb": 0.677380096,
+          "gpu_utilization_pct": 0.3532754080717489
+        },
+        {
+          "name": "Pipeline Overlapping",
+          "avg_time_ms": 41.992855072021484,
+          "std_time_ms": 2.6415445512746443,
+          "fps": 23.813574911372687,
+          "gpu_allocated_gb": 0.078780416,
+          "gpu_reserved_gb": 0.406847488,
+          "gpu_utilization_pct": 0.3532754080717489
+        },
+        {
+          "name": "Combined Optimizations",
+          "avg_time_ms": 48.96388053894043,
+          "std_time_ms": 3.249944362460914,
+          "fps": 20.423217869848187,
+          "gpu_allocated_gb": 0.078780416,
+          "gpu_reserved_gb": 0.643825664,
+          "gpu_utilization_pct": 0.3532754080717489
+        }
+      ]
+    },
+    {
+      "scenario": "1080p Batch-2",
+      "results": [
+        {
+          "name": "Parallel (4 streams)",
+          "avg_time_ms": 114.39952850341797,
+          "std_time_ms": 7.013116293894985,
+          "fps": 17.48258953654905,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 2.113929216,
+          "gpu_utilization_pct": 0.3462222062780269
+        },
+        {
+          "name": "Mixed Precision (FP16)",
+          "avg_time_ms": 165.74735641479492,
+          "std_time_ms": 2.101083016949577,
+          "fps": 12.066557459865924,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 1.690304512,
+          "gpu_utilization_pct": 0.3462222062780269
+        },
+        {
+          "name": "Dynamic Batching",
+          "avg_time_ms": 222.3170280456543,
+          "std_time_ms": 242.89679368029644,
+          "fps": 8.99616200154172,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 0.945815552,
+          "gpu_utilization_pct": 0.3462222062780269
+        },
+        {
+          "name": "Memory Pre-allocated",
+          "avg_time_ms": 95.71943283081055,
+          "std_time_ms": 8.294563810980716,
+          "fps": 20.894398774124703,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 0.677380096,
+          "gpu_utilization_pct": 0.3462222062780269
+        },
+        {
+          "name": "Pipeline Overlapping",
+          "avg_time_ms": 70.38421630859375,
+          "std_time_ms": 6.214532222642487,
+          "fps": 28.415461660199018,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 0.406847488,
+          "gpu_utilization_pct": 0.3462222062780269
+        },
+        {
+          "name": "Combined Optimizations",
+          "avg_time_ms": 87.65726089477539,
+          "std_time_ms": 9.425931623677648,
+          "fps": 22.816136160138736,
+          "gpu_allocated_gb": 0.077207552,
+          "gpu_reserved_gb": 1.151336448,
+          "gpu_utilization_pct": 0.3462222062780269
+        }
+      ]
+    }
+  ],
+  "best_approach": "Pipeline Overlapping"
+}

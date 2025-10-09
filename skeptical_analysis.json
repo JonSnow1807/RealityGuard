@@ -1,0 +1,14 @@
+{
+  "issues": [
+    "System uses simulation methods",
+    "Output barely different from input - privacy protection not working"
+  ],
+  "suspicious": [
+    "System has simulation fallback for regions",
+    "System can run without real YOLO",
+    "Very low memory growth (2.6MB) suggests minimal processing"
+  ],
+  "real_fps": 23.41384990171436,
+  "memory_growth": 2.621439999999893,
+  "output_difference": 0.0
+}

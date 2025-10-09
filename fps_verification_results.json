@@ -1,0 +1,16 @@
+{
+  "claimed_fps": 48.7,
+  "test_results": {
+    "baseline_copy": 3545.6608111992155,
+    "opencv_blur": 171.13838354905653,
+    "patent_geometric_half": 92.03235453951685,
+    "patent_geometric": 94.25847062445644,
+    "patent_neural": 99.62646346938145,
+    "patent_cached": 96.54218062713343,
+    "patent_diffusion": 94.06610165310201,
+    "file_thorough_test_report.json": 78.46666666666665,
+    "file_patent_validation_all.json": 43.40835494855705
+  },
+  "discrepancy": -43.33235453951684,
+  "analysis": "Within range"
+}

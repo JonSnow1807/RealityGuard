@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-09-30 15:10:42",
+  "tests": {
+    "imports": {
+      "real_ai_privacy_system": "\u2705 Success",
+      "enhanced_real_ai_system": "\u2705 Success",
+      "final_production_ready": "\u2705 Success",
+      "fixed_production_system": "\u2705 Success"
+    },
+    "memory": {
+      "initial_mb": 410.3671875,
+      "final_mb": 1045.125,
+      "growth_mb": 17.40234375,
+      "leak_detected": false
+    },
+    "output_quality": {
+      "output_final_production.mp4": {
+        "size_mb": 0.35,
+        "resolution": "640x480",
+        "fps": 30.0,
+        "frames": 150,
+        "privacy_visible": "True"
+      },
+      "output_real_ai_privacy.mp4": {
+        "size_mb": 0.48,
+        "resolution": "1280x720",
+        "fps": 30.0,
+        "frames": 300,
+        "privacy_visible": "True"
+      },
+      "output_enhanced_ai.mp4": {
+        "size_mb": 0.21,
+        "resolution": "640x480",
+        "fps": 30.0,
+        "frames": 150,
+        "privacy_visible": "False"
+      }
+    },
+    "error_handling": {
+      "none_input": "\u2705 Handled",
+      "empty_frame": "\u274c Crash",
+      "wrong_shape": "\u26a0\ufe0f Exception (expected)",
+      "huge_frame": "\u2705 Processed"
+    },
+    "performance": {
+      "480p": {
+        "avg_time_ms": 12.61,
+        "fps": 79.3,
+        "realtime": "True"
+      },
+      "720p": {
+        "avg_time_ms": 12.08,
+        "fps": 82.8,
+        "realtime": "True"
+      },
+      "1080p": {
+        "avg_time_ms": 13.64,
+        "fps": 73.3,
+        "realtime": "True"
+      }
+    },
+    "code_quality": {
+      "docstrings": true,
+      "error_handling": true,
+      "logging": true,
+      "type_hints": true,
+      "constants": true,
+      "no_bare_except": false,
+      "no_eval": false,
+      "no_exec": true
+    },
+    "gpu_efficiency": {
+      "initial_gb": 0.024,
+      "current_gb": 0.089,
+      "peak_gb": 0.123,
+      "efficient": true
+    }
+  },
+  "issues": [
+    "No empty frame handling"
+  ],
+  "recommendations": [
+    "Avoid bare except clauses - catch specific exceptions"
+  ],
+  "metrics": {
+    "avg_fps": 78.46666666666665
+  }
+}
