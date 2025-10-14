@@ -47,6 +47,18 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "So I want you to do a proper test testing real life scenario to test production readiness",
+          "pastedContents": {}
+        },
+        {
+          "display": "So what does this actually do and how",
+          "pastedContents": {}
+        },
+        {
+          "display": "push to github",
+          "pastedContents": {}
+        },
+        {
           "display": "I want something with my patented tech",
           "pastedContents": {}
         },
@@ -432,18 +444,6 @@
         },
         {
           "display": "Okay test the proven approaches again",
-          "pastedContents": {}
-        },
-        {
-          "display": "Understand the codebase by reading the md files and claude file",
-          "pastedContents": {}
-        },
-        {
-          "display": "/init ",
-          "pastedContents": {}
-        },
-        {
-          "display": "I don't trust you, test again thoroughly and then verify",
           "pastedContents": {}
         }
       ],
