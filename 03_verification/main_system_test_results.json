@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-10-14 15:44:15",
+  "tests": [
+    {
+      "name": "imports",
+      "status": "passed",
+      "message": "All imports successful"
+    },
+    {
+      "name": "initialization",
+      "status": "passed",
+      "message": "System initialized successfully"
+    },
+    {
+      "name": "context_engine",
+      "status": "passed",
+      "message": "Context generation working"
+    },
+    {
+      "name": "detection",
+      "status": "passed",
+      "message": "Detection system working"
+    },
+    {
+      "name": "privacy_generation",
+      "status": "passed",
+      "message": "Privacy generation working (0.1ms)"
+    },
+    {
+      "name": "video_pipeline",
+      "status": "passed",
+      "message": "Video processing working (75.8 FPS)"
+    },
+    {
+      "name": "configuration",
+      "status": "passed",
+      "message": "All configuration modes working",
+      "modes": [
+        {
+          "mode": "fast",
+          "steps": 1,
+          "size": 256
+        },
+        {
+          "mode": "balanced",
+          "steps": 2,
+          "size": 384
+        },
+        {
+          "mode": "quality",
+          "steps": 4,
+          "size": 512
+        }
+      ]
+    },
+    {
+      "name": "memory",
+      "status": "passed",
+      "message": "Memory management working (2553.5 MB)"
+    }
+  ],
+  "errors": [],
+  "success": true
+}

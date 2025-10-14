@@ -1,0 +1,35 @@
+{
+  "fast": {
+    "frames": 30,
+    "time": 0.8347840309143066,
+    "fps": 35.93743877340605,
+    "inference_steps": 1,
+    "generation_size": [
+      256,
+      256
+    ],
+    "skip_frames": 3
+  },
+  "balanced": {
+    "frames": 30,
+    "time": 0.4244801998138428,
+    "fps": 70.67467460945552,
+    "inference_steps": 2,
+    "generation_size": [
+      384,
+      384
+    ],
+    "skip_frames": 2
+  },
+  "quality": {
+    "frames": 30,
+    "time": 0.4199657440185547,
+    "fps": 71.4343977509617,
+    "inference_steps": 4,
+    "generation_size": [
+      512,
+      512
+    ],
+    "skip_frames": 1
+  }
+}

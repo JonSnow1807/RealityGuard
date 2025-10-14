@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-10-14 15:07:11",
+  "claims": {
+    "ai_generation": true,
+    "contextual_prompts": true,
+    "temporal_consistency": true,
+    "performance": "False",
+    "pose_preservation": true,
+    "revolutionary": "True"
+  },
+  "evidence": {
+    "generation_time": 1.483102560043335,
+    "ai_creates_new_content": "True",
+    "contexts_tested": 3,
+    "styles_tracked": 5,
+    "detection_fps": 9.583899119673521,
+    "estimated_pipeline_fps": 0.5700143931113113,
+    "pose_detection_available": true,
+    "working_features": "4"
+  },
+  "warnings": [],
+  "final_verdict": {
+    "verified_claims": "5",
+    "total_claims": 6,
+    "percentage": 83.33333333333334,
+    "is_legitimate": "True"
+  }
+}
