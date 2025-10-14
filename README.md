@@ -115,7 +115,7 @@ Key optimizations implemented:
 **Chinmay Shrivastava**
 - Email: cshrivastava2000@gmail.com
 - GitHub: [@JonSnow1807](https://github.com/JonSnow1807)
-- LinkedIn: [Connect on LinkedIn](https://www.linkedin.com/in/cshrivastava/))
+- LinkedIn: [Connect on LinkedIn](https://www.linkedin.com/in/cshrivastava/)
 
 ## License
 
