@@ -47,6 +47,38 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "I want something with my patented tech",
+          "pastedContents": {}
+        },
+        {
+          "display": "So is it utlising the things I patented",
+          "pastedContents": {}
+        },
+        {
+          "display": "So what can be done to actually make it revolutionary",
+          "pastedContents": {}
+        },
+        {
+          "display": "So what all does our current system do, compare it with others in the market to decide whether it is actually revolutionary or just gimmicky",
+          "pastedContents": {}
+        },
+        {
+          "display": "Okay keep the current system for now, but try and test with 4k optimizations if they work, and if not we will stick to this",
+          "pastedContents": {}
+        },
+        {
+          "display": "So what should I do now",
+          "pastedContents": {}
+        },
+        {
+          "display": "So are you sure these are real nd verified on real life data for actual usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "I still don't trust you, test real life use case properly",
+          "pastedContents": {}
+        },
+        {
           "display": "Okay so can you improve it somehow using CUDA or something",
           "pastedContents": {}
         },
@@ -413,38 +445,6 @@
         {
           "display": "I don't trust you, test again thoroughly and then verify",
           "pastedContents": {}
-        },
-        {
-          "display": "I want you to try and test all the 5 approaches, then document your findings and push to github under my name only, email is cshrivastava2000@gmail.com, github repo: https://github.com/JonSnow1807/RealityGuard, but make sure to test thoroughly and twice, cuz you always make a mistake in testing",
-          "pastedContents": {}
-        },
-        {
-          "display": "Please research properly, it's ept 2025, look for research papers or anything or just like a wrapper, but I want something groundbreaking",
-          "pastedContents": {}
-        },
-        {
-          "display": "First test the metrics again",
-          "pastedContents": {}
-        },
-        {
-          "display": "Read the codebase, md files and the claude file which is a bit outdated, and then tell me the current scenario",
-          "pastedContents": {}
-        },
-        {
-          "display": "Analyse the codebase, md files and outdated claude file to understand what we have now currently",
-          "pastedContents": {}
-        },
-        {
-          "display": "I think I had soemthing working with 30+ FPS everywhere",
-          "pastedContents": {}
-        },
-        {
-          "display": "So what do we currently have",
-          "pastedContents": {}
-        },
-        {
-          "display": "Read the md files, codebase and the outdated claude file to understand the situation",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -501,5 +501,6 @@
     "organizationName": "cshrivastava2000@gmail.com's Organization",
     "organizationBillingType": "stripe_subscription"
   },
-  "sonnet45MigrationComplete": true
+  "sonnet45MigrationComplete": true,
+  "hasUsedBackslashReturn": true
 }
