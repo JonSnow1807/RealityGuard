@@ -35,7 +35,7 @@ class OptimizedConfig:
     # Performance settings
     num_inference_steps: int = 1  # LCM with 1 step for ultra-fast
     guidance_scale: float = 0.0  # No guidance for speed
-    strength: float = 0.99  # High strength for single step
+    strength: float = 1.0  # Full strength to avoid 0 steps issue
 
     # Resolution optimization
     generation_size: Tuple[int, int] = (256, 256)  # Generate at low res, upscale later
@@ -65,14 +65,17 @@ class OptimizedConfig:
         """Adjust settings based on quality mode"""
         if self.quality_mode == "fast":
             self.num_inference_steps = 1
+            self.strength = 1.0  # Must be 1.0 for single step
             self.generation_size = (256, 256)
             self.process_every_n_frames = 3
         elif self.quality_mode == "balanced":
             self.num_inference_steps = 2
+            self.strength = 0.8  # Adjusted for 2 steps
             self.generation_size = (384, 384)
             self.process_every_n_frames = 2
         elif self.quality_mode == "quality":
             self.num_inference_steps = 4
+            self.strength = 0.75  # Adjusted for 4 steps
             self.generation_size = (512, 512)
             self.process_every_n_frames = 1
 
@@ -501,7 +504,7 @@ class OptimizedRealityGuard:
         # Cleanup
         cap.release()
         out.release()
-        cv2.destroyAllWindows()
+        # cv2.destroyAllWindows() # Removed - causes error in headless environment
 
         # Calculate final statistics
         total_time = time.time() - start_time
@@ -551,7 +554,7 @@ class OptimizedRealityGuard:
                                 'bbox': [int(x1), int(y1), int(x2), int(y2)],
                                 'class': 'person',
                                 'confidence': conf,
-                                'tracking_id': int(box.id) if hasattr(box, 'id') else 0
+                                'tracking_id': int(box.id) if hasattr(box, 'id') and box.id is not None else 0
                             })
 
             return regions

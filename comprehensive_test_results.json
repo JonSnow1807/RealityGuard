@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-10-14T15:55:18.384418",
+  "tests_run": [
+    "main_system",
+    "patent_claims",
+    "real_world"
+  ],
+  "main_system": {
+    "success": false,
+    "results": {
+      "timestamp": "2025-10-14T15:55:18.384479",
+      "tests": [
+        {
+          "name": "imports",
+          "status": "passed"
+        },
+        {
+          "name": "initialization",
+          "status": "passed"
+        },
+        {
+          "name": "error",
+          "status": "failed",
+          "error": "object of type 'ContextualPrompt' has no len()"
+        }
+      ]
+    }
+  },
+  "patent_claims": {
+    "success": false,
+    "results": {
+      "claim1": {
+        "description": "Real-time processing (>24 FPS)",
+        "verified": false
+      },
+      "claim2": {
+        "description": "AI-based mask generation",
+        "verified": false
+      },
+      "claim3": {
+        "description": "Context-aware adaptation",
+        "verified": false
+      },
+      "claim4": {
+        "description": "Temporal consistency",
+        "verified": false
+      },
+      "claim5": {
+        "description": "Multi-layer caching",
+        "verified": false
+      },
+      "claim6": {
+        "description": "Production deployment ready",
+        "verified": false
+      }
+    }
+  },
+  "real_world": {
+    "success": false,
+    "results": {}
+  },
+  "overall_success": false
+}

@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-10-14T15:57:52.900833",
+  "tests": {
+    "components": [
+      {
+        "test": "imports",
+        "status": "\u2705 PASS"
+      },
+      {
+        "test": "initialization",
+        "status": "\u2705 PASS"
+      },
+      {
+        "test": "context_engine",
+        "status": "\u2705 PASS"
+      },
+      {
+        "test": "detection",
+        "status": "\u2705 PASS",
+        "regions": 0
+      },
+      {
+        "test": "privacy_generation",
+        "status": "\u2705 PASS",
+        "note": "fallback"
+      },
+      {
+        "test": "frame_interpolation",
+        "status": "\u2705 PASS"
+      },
+      {
+        "test": "configuration",
+        "status": "\u2705 PASS",
+        "modes": [
+          {
+            "mode": "fast",
+            "steps": 1,
+            "size": 256
+          },
+          {
+            "mode": "balanced",
+            "steps": 2,
+            "size": 384
+          },
+          {
+            "mode": "quality",
+            "steps": 4,
+            "size": 512
+          }
+        ]
+      },
+      {
+        "test": "memory",
+        "status": "\u2705 PASS",
+        "memory_mb": 4492.09228515625
+      }
+    ],
+    "performance": {
+      "fast": {
+        "fps": 182.75914056270398,
+        "time": 0.16415047645568848,
+        "frames": 30,
+        "meets_realtime": true
+      },
+      "balanced": {
+        "fps": 147.77434982002242,
+        "time": 0.20301222801208496,
+        "frames": 30,
+        "meets_realtime": true
+      },
+      "quality": {
+        "fps": 85.28474989833265,
+        "time": 0.3517627716064453,
+        "frames": 30,
+        "meets_realtime": true
+      }
+    },
+    "patent_claims": {
+      "claim1": {
+        "description": "Real-time processing (>24 FPS)",
+        "verified": true,
+        "fps": 146.35526264137448
+      },
+      "claim2": {
+        "description": "AI-based mask generation",
+        "verified": true
+      },
+      "claim3": {
+        "description": "Context-aware adaptation",
+        "verified": true
+      },
+      "claim4": {
+        "description": "Temporal consistency",
+        "verified": true
+      },
+      "claim5": {
+        "description": "Multi-layer caching",
+        "verified": true
+      },
+      "claim6": {
+        "description": "Production deployment ready",
+        "verified": true
+      }
+    },
+    "real_world": {
+      "real_world_fps": 71.6689592008653,
+      "processing_time": 0.013953042030334473
+    }
+  }
+}
