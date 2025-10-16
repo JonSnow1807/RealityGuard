@@ -7,52 +7,47 @@ __pycache__/
 env/
 venv/
 ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
-# IDEs
+# Test outputs
+test_*.jpg
+test_*.mp4
+ai_test_*.jpg
+ai_output_*.mp4
+gpu_*.jpg
+gpu_*.mp4
+production_*.jpg
+production_*.mp4
+*_result_*.jpg
+*_output_*.mp4
+
+# Reports
+comprehensive_test_report_*.json
+ai_replacement_honest_report_*.json
+
+# IDE
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
-
-# OS
 .DS_Store
-Thumbs.db
 
-# Project specific
-data/videos/*
-data/images/*
-*.onnx
+# Model weights
 *.pt
 *.pth
-*.trt
-models/*.onnx
-models/*.pt
+*.onnx
+
+# Videos and large files
+*.avi
+*.mov
+*.mkv
+
+# Logs
 *.log
-*.cache
-temp/
+logs/
+
+# Cache
+.cache/
+
+# Temporary files
 tmp/
-
-# Keep directory structure
-!data/videos/.gitkeep
-!data/images/.gitkeep
-!models/.gitkeep
-
-# Claude IDE files
-.claude*
-.coderabbit/
+temp/
+*.tmp
