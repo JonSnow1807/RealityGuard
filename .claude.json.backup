@@ -47,6 +47,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Okay so update the readme and everything accordignly and push to my guthub and don't include your name while pushing",
+          "pastedContents": {}
+        },
+        {
+          "display": "Okay so focus on that, and comprehensively test it for production readiness, cuz you are known to hallucinate and give false results, test it properly on real life data which it will work on and make sure the fallback mechanism is not tested",
+          "pastedContents": {}
+        },
+        {
           "display": "Which should I pursues more in terms of computer vision, my patents and overall getting a job at meta",
           "pastedContents": {}
         },
@@ -436,14 +444,6 @@
         },
         {
           "display": "Analyse the md files and the codebase and the claude file to understand our current scenaio wuth the patentable thing",
-          "pastedContents": {}
-        },
-        {
-          "display": "Okay so how should I patent this, guide me step by step",
-          "pastedContents": {}
-        },
-        {
-          "display": "So push to github under my name only",
           "pastedContents": {}
         }
       ],
